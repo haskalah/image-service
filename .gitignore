@@ -46,3 +46,5 @@ lerna-debug.log*
 #Build Files
 *.d.ts
 *.js
+
+/src/scripts/images

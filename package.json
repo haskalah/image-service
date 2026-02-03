@@ -1,6 +1,6 @@
 {
   "name": "image-service",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Image management service with API key authentication",
   "author": "Haskalah",
   "private": true,
