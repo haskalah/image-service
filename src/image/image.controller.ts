@@ -35,19 +35,20 @@ export class ImageController {
         );
     }
 
-    @Get(':imageID')
-    @RequirePermission(API_KEY_PERMISSIONS.READ)
-    async getByID(@Param('imageID') imageID: string) {
-        return this.imageService.getByID(imageID);
-    }
-
     @Get(':imageID/file')
     @RequirePermission(API_KEY_PERMISSIONS.READ)
     async getFile(@Param('imageID') imageID: string, @Res() res: Response) {
         const filePath = await this.imageService.getFilePath(imageID);
         const image = await this.imageService.getByID(imageID);
         res.setHeader('Content-Type', image.MimeType);
+        res.setHeader('Cache-Control', 'public, max-age=86400');
         res.sendFile(filePath);
+    }
+
+    @Get(':imageID')
+    @RequirePermission(API_KEY_PERMISSIONS.READ)
+    async getByID(@Param('imageID') imageID: string) {
+        return this.imageService.getByID(imageID);
     }
 
     @Get()

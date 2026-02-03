@@ -1,6 +1,6 @@
 {
   "name": "image-service",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Image management service with API key authentication",
   "author": "Haskalah",
   "private": true,
@@ -17,7 +17,7 @@
     "key:list": "npx ts-node src/scripts/list-api-keys.ts",
     "key:update": "npx ts-node src/scripts/update-api-key.ts",
     "key:revoke": "npx ts-node src/scripts/revoke-api-key.ts",
-    "migrate:primordia": "npx ts-node src/scripts/migrate-primordia-images.ts"
+    "migrate:primordia": "npx ts-node ../primordia-backend/scripts/migrate-primordia-images.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

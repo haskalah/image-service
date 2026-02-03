@@ -2,8 +2,9 @@
 /dist
 /node_modules
 
-package-lock.json
 yalc.lock
+.yalc
+/images
 
 # Logs
 logs
