@@ -41,6 +41,8 @@ lerna-debug.log*
 #Environment Variables
 .env
 
+.npmrc
+
 #Build Files
 *.d.ts
 *.js
